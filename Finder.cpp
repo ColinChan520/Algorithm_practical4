@@ -13,12 +13,7 @@ for(size_t i = 0; i <= s1.size(); i++) {
         if(indexS2 + 1 > result.size()){
             result.push_back(i);
         }
-        if(indexS1 + 1 == s1.length()){
-            allFound = true;
-            break;
-        }
-        else if (indexS2 + 1 == s2.length())
-        {
+        if(indexS1 + 1 == s1.length() || indexS2 + 1 == s2.length()){
             allFound = true;
             break;
         }
@@ -32,7 +27,7 @@ for(size_t i = 0; i <= s1.size(); i++) {
     }
 }
 int returnNotFound = s2.length() - result.size();
-// result.insert(result.end(), returnNotFound, -1);
-fill_n(back_inserter(result), returnNotFound, -1);
+result.insert(result.end(), returnNotFound, -1);
+// fill_n(back_inserter(result), returnNotFound, -1);
 return result;
 }
