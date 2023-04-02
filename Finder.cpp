@@ -14,6 +14,7 @@ for(size_t i = 0; i <= s1.size(); i++) {
             result.push_back(i);
         }
         if(indexS1 + 1 == s1.length()){
+            allFound = true;
             break;
         }
         else if (indexS2 + 1 == s2.length())
