@@ -4,7 +4,6 @@ using namespace std;
 
 vector<int> Finder::findSubstrings(string s1, string s2) {
   vector<int> result;
-  result.reserve(s2.length());
 
 for(size_t i = 0; i <= s1.size(); i++) {
     int indexS1 = i;
@@ -32,8 +31,6 @@ for(size_t i = 0; i <= s1.size(); i++) {
     }
 }
 int returnNotFound = s2.length() - result.size();
-for (int j = 0; j < returnNotFound; j++){
-result.push_back(-1);
-}
+result.insert(result.end(), returnNotFound, -1);
 return result;
 }
