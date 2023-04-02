@@ -15,6 +15,7 @@ vector<int> Finder::findSubstrings(string s1, string s2) {
     } else {
         int returnNotFound = s2.length() - result.size();
         fill_n(back_inserter(result), returnNotFound, -1);
+        return result;
     }
   }
   return result;
