@@ -31,6 +31,7 @@ for(size_t i = 0; i <= s1.size(); i++) {
     }
 }
 int returnNotFound = s2.length() - result.size();
-result.insert(result.end(), returnNotFound, -1);
+// result.insert(result.end(), returnNotFound, -1);
+fill_n(back_inserter(result), returnNotFound, -1);
 return result;
 }
